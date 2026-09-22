@@ -1,0 +1,6 @@
+Flask
+PyMuPDF
+python-docx
+python-pptx
+scikit-learn
+gunicorn

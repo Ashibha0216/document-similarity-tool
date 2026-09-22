@@ -1,0 +1,114 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+h1 {
+    font-size: 36px;
+    color: #1f2937;
+}
+
+.subtitle {
+    color: #6b7280;
+    font-size: 18px;
+}
+
+.upload-container {
+    display: flex;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.upload-box {
+    flex: 1;
+    background: white;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.upload-box h2 {
+    color: #374151;
+}
+
+input[type="file"] {
+    margin-top: 20px;
+}
+
+button {
+    margin-top: 30px;
+    padding: 14px 35px;
+    border: none;
+    border-radius: 8px;
+    background: #2563eb;
+    color: white;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+.dashboard {
+    margin-top: 40px;
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.dashboard h2 {
+    color: #374151;
+}
+
+.score {
+    font-size: 64px;
+    font-weight: bold;
+    color: #2563eb;
+    margin-top: 20px;
+}
+
+.label {
+    color: #6b7280;
+}
+
+.similarity-progress {
+    width: 80%;
+    height: 25px;
+    margin: 20px auto;
+}
+
+.files {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+    gap: 30px;
+}
+
+.files div {
+    flex: 1;
+    background: #f3f4f6;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.error {
+    margin-top: 25px;
+    padding: 15px;
+    background: #fee2e2;
+    color: #991b1b;
+    border-radius: 8px;
+}

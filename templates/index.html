@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document Similarity Analyzer</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Document Similarity Analyzer</h1>
+
+    <p class="subtitle">
+        Compare two PDF, Word, or PowerPoint documents
+    </p>
+
+    <form method="POST" enctype="multipart/form-data">
+
+        <div class="upload-container">
+
+            <div class="upload-box">
+
+                <h2>File 1</h2>
+
+                <input
+                    type="file"
+                    name="file1"
+                    accept=".pdf,.docx,.pptx"
+                    required
+                >
+
+            </div>
+
+
+            <div class="upload-box">
+
+                <h2>File 2</h2>
+
+                <input
+                    type="file"
+                    name="file2"
+                    accept=".pdf,.docx,.pptx"
+                    required
+                >
+
+            </div>
+
+        </div>
+
+
+        <button type="submit">
+            Calculate Similarity
+        </button>
+
+    </form>
+
+
+    {% if error %}
+
+    <div class="error">
+        {{ error }}
+    </div>
+
+    {% endif %}
+
+
+    {% if result %}
+
+    <div class="dashboard">
+
+        <h2>Similarity Dashboard</h2>
+
+        <div class="score">
+            {{ similarity }}%
+        </div>
+
+        <p class="label">
+            Document Similarity
+        </p>
+
+        <progress
+            class="similarity-progress"
+            value="{{ similarity }}"
+            max="100">
+        </progress>
+
+
+        <div class="files">
+
+            <div>
+                <strong>File 1</strong>
+                <p>{{ file1_name }}</p>
+            </div>
+
+            <div>
+                <strong>File 2</strong>
+                <p>{{ file2_name }}</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    {% endif %}
+
+</div>
+
+</body>
+</html>
